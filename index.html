@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your marks to get Your grade</h3>
+    <input type="text" value="" id="input1" placeholder="enter mark">
+	<button id="btn">click here<button>
+	<input type="text" value="" id="input2" placeholder="your answer">
+    <script>
+	
+        let mark=prompt("enter your mark");
+		let btn=document.getElementById('btn');
+		btn.addEventListener('click',() => {
+		
+		let input1=document.getElementById('input1').value;
+        	
+			  if(input1>80){
+				document.getElementById('input2').value='Grade A';
+			}
+			else if (input1<=80&&input1>60){
+				document.getElementById('input2').value="Grade B";	
+			}
+			else if(input1<=60&&input1>50){
+				document.getElementById('input2').value="Grade C";	
+			}
+			else if(input1<=50 && input1>45){
+				document.getElementById('input2').value="Grade D";	
+			}
+			else if(input1<=45 && input1>=25){
+				document.getElementById('input2').value="Grade E";	
+			}
+			else{
+				document.getElementById('input2').value="Grade F";	
+			}
+		}
+		)
+       
+
+    </script>
+</body>
+</html>
